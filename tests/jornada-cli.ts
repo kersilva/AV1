@@ -53,6 +53,7 @@ try {
   await responder("Senha do administrador", "Admin123!");
   await responder("Usuário:", "admin");
   await responder("Senha:", "Admin123!");
+  await comando("secreto");
   await comando("config definir --aliquota-imposto 0.15 --coeficiente-depreciacao 0.20");
   await comando('organizacao cadastrar INV001 "Invalida" 11.111.111/1111-11 "Rua X" --valor 10 --vencimento 2027-12-31');
   await comando('organizacao cadastrar ORG001 "Acme Reciclagem" 04.252.011/0001-10 "Rua Central" --valor 250 --vencimento 2027-12-31');
@@ -88,6 +89,7 @@ try {
   });
 
   assert.match(saida, /Código interno:/);
+  assert.match(saida, /Se a AV1 é assim\.\.\. Nem quero ver as próximas/);
   assert.match(saida, /bancada-desmonte/);
   assert.match(saida, /area-separacao/);
   assert.match(saida, /doca-expedicao/);

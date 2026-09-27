@@ -8,6 +8,7 @@ interface DefinicaoComando {
 const DEFINICOES_COMANDOS: DefinicaoComando[] = [
   { sintaxe: "ajuda", papeis: [PapelUsuario.ADMINISTRADOR, PapelUsuario.OPERADOR_CADASTRO, PapelUsuario.GESTOR_ALMOXARIFADO, PapelUsuario.AUDITOR] },
   { sintaxe: "sair", papeis: [PapelUsuario.ADMINISTRADOR, PapelUsuario.OPERADOR_CADASTRO, PapelUsuario.GESTOR_ALMOXARIFADO, PapelUsuario.AUDITOR] },
+  { sintaxe: "secreto", papeis: [PapelUsuario.ADMINISTRADOR, PapelUsuario.OPERADOR_CADASTRO, PapelUsuario.GESTOR_ALMOXARIFADO, PapelUsuario.AUDITOR] },
   { sintaxe: "organizacao cadastrar", papeis: [PapelUsuario.ADMINISTRADOR, PapelUsuario.OPERADOR_CADASTRO] },
   { sintaxe: "organizacao listar", papeis: [PapelUsuario.ADMINISTRADOR, PapelUsuario.OPERADOR_CADASTRO, PapelUsuario.AUDITOR] },
   { sintaxe: "journal listar", papeis: [PapelUsuario.ADMINISTRADOR, PapelUsuario.AUDITOR] },

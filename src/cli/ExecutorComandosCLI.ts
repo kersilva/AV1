@@ -64,6 +64,9 @@ export class ExecutorComandosCLI {
         depois === undefined ? null : JSON.parse(JSON.stringify(depois)), c.usuario));
 
     if (nome === "ajuda") this.mostrarAjuda(papel);
+    else if (nome === "secreto") {
+      console.log("Se a AV1 é assim... Nem quero ver as próximas");
+    }
     else if (nome === "sair") {
       await c.salvarDados();
       return false;
@@ -327,6 +330,7 @@ export class ExecutorComandosCLI {
       "relatorio gerar": "relatorio gerar --tipo organizacao|status|financeiro [opções do tipo]",
       "usuario cadastrar": "usuario cadastrar --usuario NOME --senha SENHA --papel PAPEL",
       ajuda: "ajuda",
+      secreto: "secreto",
       sair: "sair",
     };
     const linhas = comandosVisiveis(papel).map((comando) => `  ${sintaxes[comando] ?? comando}`);
