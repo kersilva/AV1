@@ -1,7 +1,7 @@
 export abstract class Validador {
-    abstract validar(valor: any): boolean;
+  abstract validar(valor: any): boolean;
 
-    obterMensagemErro(): string {
-        return "Valor inválido.";
-    }
+  obterMensagemErro(): string {
+    return "Valor inválido.";
+  }
 }
